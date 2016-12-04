@@ -197,7 +197,7 @@ class DataTypes {
 	}
 
 	public static function decodeIntOff($str, &$off) {
-		$int = ord($str[$off]);
+		$int = @ord(@$str[$off]);
 		if ($int < 0xfb) {
 			$off += 1;
 			return $int;
