@@ -318,7 +318,7 @@ class Connection {
 		$promise = $processor->startCommand(static function() use ($processor, $query) {
 			$processor->setPrepare($query);
 			$regex = <<<'REGEX'
-(["'`])(?:\\(?:\\|\1)|(?!\1).)*+\1(*SKIP)(*F)|(\?)|:([a-zA-Z_]+)
+(["'`])(?:\\(?:\\|\1)|(?!\1).)*+\1(*SKIP)(*F)|(\?)|:([a-zA-Z_0-9]+)
 REGEX;
 
 			$index = 0;
