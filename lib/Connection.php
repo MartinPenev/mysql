@@ -462,7 +462,7 @@ class Connection {
 		$promise = $this->startCommand(function() use ($query) {
 			$this->query = $query;
 			$regex = <<<'REGEX'
-(["'`])(?:\\(?:\\|\1)|(?!\1).)*+\1(*SKIP)(*F)|(\?)|:([a-zA-Z_]+)
+(["'`])(?:\\(?:\\|\1)|(?!\1).)*+\1(*SKIP)(*F)|(\?)|:([a-zA-Z_0-9]+)
 REGEX;
 
 			$index = 0;
